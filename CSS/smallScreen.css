@@ -1,0 +1,11 @@
+
+#aboutme{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+#workAndSkills{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}

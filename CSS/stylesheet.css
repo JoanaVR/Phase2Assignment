@@ -1,0 +1,315 @@
+
+/*setting background colours and the padding*/
+html, body{
+    background-color: whitesmoke;
+    font-family: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/*boxes around the header and footer*/
+header, footer{
+    text-align: center;
+    background-color: rgb(28, 149, 224);
+    padding-bottom: 1%;
+
+}
+
+/*realign so that the footer is the left but has all the same properties as the header*/
+footer{ 
+    padding: 1%;
+    text-align: left;
+    color: whitesmoke;
+    position: fixed;
+
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*styling the header and footer that will be consistent for all the pages*/
+header h1{
+    background-color: rgb(4, 85, 165);
+    color: whitesmoke;
+    padding: 2%;
+}
+
+header ul, footer ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0;
+    border: 0;
+}
+
+section{
+    padding: 2%;
+}
+
+/*sizeing heading and alighning text*/
+h1 {
+    font-size: 2rem;
+}
+h2{
+    font-size: 120%;
+    text-align: left;
+}
+h3{
+    font-size: 120%;
+    text-align: center;
+}
+h4{
+    font-size: 105%;
+    text-align: left
+}
+
+/*making the links change colour when hovered over and after clicked*/
+a:hover{
+   background-color: rgba(245, 245, 245, 0.707); 
+   color: rgb(28, 149, 224);
+}
+a{
+    color: whitesmoke;
+}
+
+/*style for the about me page*/
+#me {
+    grid-area: myInfo;
+}
+#me img{
+    border: solid rgb(28, 149, 224) 2px;
+    width: 40%;
+    height: auto;
+}
+#me figcaption{
+    color: rgb(28, 149, 224);
+}
+#hobbies{
+    grid-area: hobbies;
+}
+#topBooks{
+    grid-area: books;
+}
+#topMusic{
+    grid-area: music;
+}
+#topBooks, #topMusic{
+    border: solid rgb(28, 149, 224) 2px;
+    padding-bottom: 2%;
+}
+#topBooks h4, #topMusic h4{
+    background-color: rgb(28, 149, 224);
+    padding: 2%;
+    text-align: center;
+    color: whitesmoke;
+}
+#topBooks ul, #topMusic ul{
+    list-style: none;
+}
+
+#aboutme{
+    display: grid;
+    grid-template-areas: 
+    "myInfo myInfo hobbies hobbies"
+    "myInfo myInfo books music";
+    gap: 2%;
+}
+
+/*here i will start making specific changes for classes and id that will not apply generally to everyone.*/
+#workAndSkills{
+    display: flex;
+    gap: 2%;
+    
+}
+#workAndSkills h2{
+    text-align: center;
+}
+#workAndSkills a{
+    color: rgb(28, 149, 224);
+}
+#work, #skills{
+    border: solid rgb(28, 149, 224) 2px;
+    padding-bottom: 2%;
+}
+#work h2, #skills h2{
+    background-color: rgb(4, 85, 165);
+    padding: 2%;
+    color: whitesmoke;
+}
+#work ul, #skills ul{
+    padding-right: 2%;
+    text-align: left;
+}
+#skills p{
+    padding-left: 2%;
+}
+
+/* styles for the education page*/
+#educationTable{
+    padding: 1%;
+    border: solid rgb(28, 149, 224) 2px;
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+#educationTable th, #educationTable td{
+    border: solid rgb(28, 149, 224) 2px;
+    padding: 1%;
+}
+
+/*Style for the contacts page*/
+#contact a, #blog a{
+    color: rgb(28, 149, 224);
+}
+#myEmail{
+    grid: myEmail;
+}
+#myPhone{
+    grid: myPhone;
+}
+#myGithub{
+    grid: myGithub;
+}
+#myLinkedIn{
+    grid: myLinkedIn;
+}
+#contact ul{
+    list-style:none ;
+    display: grid;
+    grid-template-areas:
+    "myEmail myPhone"
+    "myGithub myLinkedIn";
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+}
+#contact ul img{
+    height: 1.75rem;
+}
+
+/* my blog style */
+#logoutbutton{
+    border: solid rgb(4, 85, 165) 2px;
+    background-color: rgb(4, 85, 165);
+    color: whitesmoke;
+    padding: 2%;
+    width: 10%;
+
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#logoutButtonLink {
+    display: flex ;
+    justify-content: center;
+    width: 100%;
+}
+#blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    border: solid rgb(4, 85, 165) 2px;
+    padding: 2%;
+    background-color: rgb(28, 149, 224);
+}
+
+fieldset{
+    border: rgb(4, 85, 165);
+    background-color: whitesmoke;
+    padding: 3%;
+}
+#blog form{
+    width: 40%;
+}
+
+#content{
+    width: 100%;
+    height: 20rem;
+    padding: 1%;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.button-container input[type="submit"], .button-container input[type="reset"] {
+    width: 20%;
+    color: rgb(4, 85, 165);
+    padding: 1%;
+}
+.button-container {
+    gap: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+/* tryling the viewBlog page */
+    #displaycedPost {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        padding-bottom: 2%;
+    }
+
+    #postsContainer{
+        gap: 2%;
+        padding: 2%;
+    }
+
+    #displaycedPost article {
+        position: relative;
+        background-color: white;
+        border: 1px solid #ddd;
+    }
+    
+
+    #displaycedPost p {
+        text-align: left;
+        padding: 1%;
+    }
+
+    #displaycedPost h2{
+        background-color: rgb(28, 149, 224);
+        color: whitesmoke;
+        padding: 1%;
+        text-align: left;
+    }
+
+    #displaycedPost aside{
+        color: rgb(4, 85, 165);
+        text-align: right;
+        padding: 0.5%
+    }
+
+    /* styling the preview gape */
+#previewBody{
+    padding: 2%;
+}
+
+#previewButtons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center horizontally */
+    margin-top: 20px;
+}
+
+.styledButton {
+    background-color: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.styledButton :hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
